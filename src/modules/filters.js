@@ -10,3 +10,8 @@ export const categoryFilter = (goods, text) => {
    })
 }
 
+export const priceFilter = (goods, min = 0, max = 150000) => {
+   return goods.filter((goodsItem) => {
+      return goodsItem.price > min && goodsItem.price < max
+   })
+}
